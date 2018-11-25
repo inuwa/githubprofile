@@ -1,0 +1,21 @@
+.nav-brand {
+    width: 100%;
+    left: 10px;
+    top: -10px;
+    text-align: left;
+    margin: auto;
+    padding:0;
+
+    @media only screen and (min-width: 700px){
+        position: absolute;
+    }
+}
+
+
+.navbar-nav {
+    margin-left: 0px;
+
+    @media only screen and (min-width: 700px){
+        margin-left: 90px;
+    }
+}

@@ -1,0 +1,229 @@
+component-home {
+  $eastern-blue: #22A39F;
+  $royal-blue: #4169e1;
+  $sirocco: #727878;
+  $beige: #F5F5DC;
+  $black: #000000;
+  $white: #FFFFFF;
+
+  %header-title {
+    font-weight: 300;
+    color: $eastern-blue;
+  }
+  %header-body {
+    color: $sirocco;
+    font-size: 21px;
+    font-weight: 300;
+    line-height: 1.4;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    // max-width: 600px;
+  }
+  %hr-settings {
+    overflow: visible;
+    /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: black;
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+    border-top: 1px solid $sirocco;
+    // width: 600px !important;
+  }
+  %hr-settings--before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: black;
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
+  }
+  %align-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .main-header-container {
+    @extend %align-container;
+  }
+  .main-header {
+    @extend %header-title;
+  }
+  .main-header__paragraph {
+    @extend %header-body;
+  }
+  .main-header__hr {
+    @extend %hr-settings;
+  }
+  .main-header__hr::before {
+    @extend %hr-settings--before;
+  }
+  .main-content__title {
+    @extend %header-title;
+    padding-bottom: 15px;
+  }
+  .profile-pic {
+    .profile-pic__image {
+      height: 260px;
+      width: 160px;
+      border: 5px solid $beige;
+    }
+  }
+  .about-me {
+    height: 700px;
+    padding: 5px;
+    width: 100%;
+
+    @media only screen and (max-width: 460px) {
+      box-sizing: content-box;
+      height: 1000px;
+    }
+  }
+  .background-beige {
+    background-color: $beige;
+    
+    @media only screen and (max-width: 460px) {
+      width: 134%;
+    }
+  }
+  .pad-heading {
+    padding-top: 20px;
+
+    @media only screen and (max-width: 768px) and (min-width: 768px) {
+      padding-right: 30px;
+      padding-left: 0;
+    }
+  }
+  .abilities {
+    height: 700px;
+    width: 100%;
+
+    @media only screen and (max-width: 460px) {
+      box-sizing: content-box;
+      height: 1150px;
+      width: 90%;
+    }
+  }
+  .ability-title {
+    float: left;
+    width: 230px;
+  }
+  .ability-score {
+    width: 220px;
+  }
+  .no-bullets {
+    list-style-type: none;
+    padding-left: 0;
+    @media screen and (min-width: 768px) {
+      min-width: 300px;
+    }
+  }
+  .no-bullets__li {
+    width: 100%;
+  }
+  .projects {
+    height: 700px;
+    width: 100%;
+
+    @media only screen and (max-width: 460px) {
+      box-sizing: content-box;
+      height: 1000px;
+    }
+  }
+  .u-hide-large {
+    @media only screen and (min-width: 769px) {
+      display: none;
+    }
+  }
+  .u-hide-medium {
+    @media only screen and (min-width: 461px) and (max-width: 768px) {
+      display: none;
+    }
+  }
+  .u-hide-small {
+    @media only screen and (max-width: 460px) {
+      display: none;
+    }
+  }
+
+  .hover-menu {
+    overflow: hidden;
+    position: fixed;
+    top: 150px;
+    right: 100px;
+    width: 110px;
+    height: 320px;
+    background-color: $black;
+    border-radius: 3px;
+    z-index: 9999;
+
+    @media only screen and (max-width: 769px) {
+      -webkit-backface-visibility: hidden; /*fix for mobile not scrolling*/
+      top: 10px;
+      right: 10px;
+      width: 40px;
+      height: 135px;
+    }
+
+    .scroll-down {
+      color: $white;
+      font-size: 30px;
+      padding-right: 2px;
+      padding-top: 20px;
+      animation-name: wiggle;
+      animation-duration: 1.2s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-direction: normal;
+    }
+    @keyframes wiggle {
+      0% {
+        padding-top: 10px;
+      }
+      50% {
+        padding-top: 15px;
+      }
+      100% {
+        padding-top: 20px;
+      }
+    }
+    ul {
+      list-style-type: none;
+      padding: 0;
+      li {
+        @media only screen and (max-width: 768px) {
+          height: 45px;
+          padding: 5px 0;
+        }
+        border-bottom: 1px solid $white;
+        height: 80px;
+        padding: 25px 0px 10px 0px;
+        color: $white;
+        font-weight: 500;
+        font-size: 16px;
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+      }
+      li>a:visited,
+      li>a {
+        color: $white;
+      }
+      li>a:hover {
+        color: $sirocco;
+      }
+      li:first-child {
+        @media only screen and (max-width: 768px) {
+          padding-top: 5px;
+        }
+        padding-top: 0;
+      }
+      li:last-child {
+        border-bottom: none;
+      }
+    } // color: white;
+  }
+}

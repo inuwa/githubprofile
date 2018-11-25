@@ -3,14 +3,21 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
+import { HomeComponent } from './home/home.component';
+import { NavigationComponent } from './shared/navigation/navigation.component';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ProfileComponent } from './profile/profile.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    NavigationComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MDBBootstrapModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]
