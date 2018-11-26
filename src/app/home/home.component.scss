@@ -5,6 +5,7 @@ component-home {
   $beige: #F5F5DC;
   $black: #000000;
   $white: #FFFFFF;
+  $tundora: #434242;
 
   %header-title {
     font-weight: 300;
@@ -132,6 +133,104 @@ component-home {
     @media only screen and (max-width: 460px) {
       box-sizing: content-box;
       height: 1000px;
+    }
+  }
+  
+  .figure {
+    position: relative;
+    overflow: hidden;
+    width: 330px;
+    height: 260px;
+    
+    h3 {
+      color: #FFF;
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    a {
+      z-index: 1000;
+      text-indent: 200%;
+      white-space: nowrap;
+      font-size: 0;
+      opacity: 0;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+    }
+
+    .icon {
+      background: #22A39F;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      width: 48px;
+      height: 48px;
+
+      span {
+        font-size: 18px;
+        line-height: 18px;
+        padding: 15px;
+      }
+    }
+    &.effect {
+      background: $eastern-blue;
+      color: $white;
+
+      h3 {
+        position: relative;
+        overflow: hidden;
+        padding-bottom: 20px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+      }
+
+      img {
+        width: 110%;
+        height: 100%;
+        transition: opacity 0.35s, transform 0.35s;
+        transform: translate3d(-10px,0,0);
+        backface-visibility: hidden;
+      }
+
+      figcaption {
+        padding: 20px 30px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        height: 100%;
+        width: 100%;
+        text-align: left;
+      }
+
+      p {
+        padding-top: 10px;
+        opacity: 0;
+        -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+        transition: opacity 0.35s, transform 0.35s;
+        -webkit-transform: translate3d(100%,0,0);
+        transform: translate3d(100%,0,0);
+
+        > strong {
+          width: 60px;
+          display: inline-block;
+          margin: 0px;
+        }
+      }
+    }
+  }
+  .background-gray {
+    background: $tundora;
+  }
+
+  .footer {
+    color: $white;
+
+    .no-bullets--inline {
+      display: inline;
     }
   }
   .u-hide-large {
