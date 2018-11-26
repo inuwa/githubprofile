@@ -175,6 +175,7 @@ component-home {
         padding: 15px;
       }
     }
+
     &.effect {
       background: $eastern-blue;
       color: $white;
@@ -186,24 +187,16 @@ component-home {
         opacity: 0;
         -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
         transition: opacity 0.35s, transform 0.35s;
+        font-size: 28px;
       }
 
       img {
         width: 110%;
         height: 100%;
+        width: calc(100% + 20px);
         transition: opacity 0.35s, transform 0.35s;
         transform: translate3d(-10px,0,0);
         backface-visibility: hidden;
-      }
-
-      figcaption {
-        padding: 20px 30px;
-        position: absolute;
-        top: 0px;
-        left: 0px;
-        height: 100%;
-        width: 100%;
-        text-align: left;
       }
 
       p {
@@ -213,13 +206,22 @@ component-home {
         transition: opacity 0.35s, transform 0.35s;
         -webkit-transform: translate3d(100%,0,0);
         transform: translate3d(100%,0,0);
-
+  
         > strong {
           width: 60px;
           display: inline-block;
           margin: 0px;
         }
       }
+    }
+    figcaption {
+      padding: 20px 30px;
+      position: absolute;
+      top: 0px;
+      left: 0px;
+      height: 100%;
+      width: 100%;
+      text-align: left;
     }
   }
   .background-gray {
